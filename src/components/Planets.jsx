@@ -8,9 +8,17 @@ export default function Planets() {
     <>
       <h2>Planets</h2>
       <div className="container">
-        {planets.map((item) => {
-          const { id, img, planet, info } = item;
-          return <Cards key={id} image={img} planet={planet} info={info} />;
+        {planets?.map((item) => {
+          const { id, img, planet, info, link } = item;
+          return (
+            <Cards
+              key={id}
+              image={img}
+              planet={planet}
+              info={info}
+              link={link}
+            />
+          );
         })}
       </div>
     </>

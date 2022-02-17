@@ -1,6 +1,6 @@
-export default function Cards({ image, planet, info }) {
+export default function Cards({ image, planet, info, link }) {
   const handleButtonClick = (e) => {
-    alert(planet);
+    window.open(link, "_blank");
   };
   return (
     <>

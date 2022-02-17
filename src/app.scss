@@ -45,3 +45,17 @@ body {
     position: absolute;
     bottom: 0;
 }
+
+.home {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    text-align: center;
+    &-header {
+        border: 2px solid white;
+        color: whitesmoke;
+        margin: 20px;
+    }
+}

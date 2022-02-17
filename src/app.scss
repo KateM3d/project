@@ -1,3 +1,4 @@
+@import "~bootstrap/scss/bootstrap";
 body {
     background-image: url("https://images.unsplash.com/photo-1590907047706-ee9c08cf3189?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNwYWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60&q=60");
     background-repeat: no-repeat;
@@ -18,4 +19,27 @@ body {
         margin: 10px;
         padding: 20px;
     }
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.card {
+    text-align: center;
+    background-color: grey;
+    width: 300px;
+    margin: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.btn {
+    width: 300px;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    color: whitesmoke;
+    background-color: black;
 }

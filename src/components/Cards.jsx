@@ -5,7 +5,7 @@ export default function Cards({ image, planet, info, link }) {
 
   const handleShowMore = (e) => {
     if (text === `${info.substring(0, 150)} ...read more`) {
-      setText(`${info}...show less`);
+      setText(`${info}...read less`);
     } else {
       setText(`${info.substring(0, 150)} ...read more`);
     }

@@ -25,6 +25,26 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    &-facts {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    &-slider {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        position: relative;
+        &-text {
+            color: whitesmoke;
+        }
+        &-inner {
+            border: 2px solid yellow;
+            margin: 20px;
+            padding: 20px;
+        }
+    }
 }
 
 .card {
@@ -49,6 +69,23 @@ body {
     border-bottom-right-radius: 20px;
     color: whitesmoke;
     background-color: black;
+    &Slider {
+        width: 100px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}
+
+.search {
+    text-align: center;
+    margin-top: 100px;
+    &-input {
+        width: 400px;
+        height: 30px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid yellow;
+    }
 }
 
 .home {

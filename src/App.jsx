@@ -2,13 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import Planets from "./components/Planets";
 import Facts from "./components/Facts";
-import Notes from "./components/Notes";
 import "./app.scss";
-
-//general info
-//planets
-//facts
-//your notes
 
 const App = () => {
   return (
@@ -27,18 +21,14 @@ const App = () => {
         <Link to="/planets" className="nav-link">
           Planets
         </Link>
-        <Link to="/facts" className="nav-link">
-          Facts
-        </Link>
-        <Link to="/notes" className="nav-link">
-          Notes
+        <Link to="/pictures" className="nav-link">
+          Pictures
         </Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/planets" element={<Planets />} />
-        <Route path="/facts" element={<Facts />} />
-        <Route path="/notes" element={<Notes />} />
+        <Route path="/pictures" element={<Facts />} />
       </Routes>
     </BrowserRouter>
   );

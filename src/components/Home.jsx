@@ -11,8 +11,7 @@ export default function Home() {
   });
 
   return (
-    <>
-      <h2>Home</h2>
+    <div className="container-home">
       <div className="home">
         <h2 ref={headerRef} className="home-header">
           There are many planetary systems like ours in the universe, with
@@ -29,6 +28,6 @@ export default function Home() {
           orbiting other stars in the Milky Way.
         </p>
       </div>
-    </>
+    </div>
   );
 }

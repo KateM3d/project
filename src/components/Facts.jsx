@@ -1,26 +1,21 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { data } from "../data";
 
 export default function Facts() {
-  const [apiData, setApiData] = useState();
+  const [slider, setSlider] = useState(data);
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    fetch("https://api.spaceflightnewsapi.net/v3/articles")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setApiData(data);
-      });
-  }, []);
-  console.log(apiData);
-
   const handleClickIncrease = () => {
-    setCount((prevCount) => prevCount + 1);
+    if (count === slider.length - 1) {
+      setCount(0);
+    } else {
+      setCount((prevCount) => prevCount + 1);
+    }
   };
 
   const handleClickDecrease = () => {
     if (count === 0) {
-      setCount(0);
+      setCount(slider.length - 1);
     } else {
       setCount((prevCount) => prevCount - 1);
     }
@@ -33,12 +28,16 @@ export default function Facts() {
         <button onClick={handleClickDecrease} className="btn btnSlider">
           back
         </button>
+
         <div className="container-slider-inner">
           <div className="container-slider">
-            <img src={apiData[count].imageUrl} alt={apiData[count]?.title} />
-            <p className="container-slider-text">{apiData[count]?.summary}</p>
-            <p className="container-slider-text">{apiData[count]?.title}</p>
-            <p className="container-slider-text">{apiData[count]?.newsSite}</p>
+            <img
+              src={slider[count].img}
+              alt={slider[count].planet}
+              width="300px"
+              height="230px"
+            />
+            <p className="header">{slider[count].planet}</p>
           </div>
         </div>
         <button onClick={handleClickIncrease} className="btn btnSlider">

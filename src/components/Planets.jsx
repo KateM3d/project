@@ -4,19 +4,23 @@ import Cards from "./Cards";
 
 export default function Planets() {
   const [planets, setPlanets] = useState(data);
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState();
 
   const handleSearchChange = (e) => {
+    e.preventDefault();
     console.log(e.target.value);
-    setSearch(e.target.value);
+    let searchValue = e.target.value;
+    setSearch(searchValue);
+    console.log(searchValue);
     console.log(search);
-    const filterPlanets = planets.filter((el) => {
-      if (el.planet.toLowerCase() === e.target.value) {
-        return el;
-      }
-    });
+
+    const filterPlanets = planets.filter(
+      (el) => el.planet.toLowerCase() === searchValue
+    );
 
     console.log(filterPlanets);
+
+    return setPlanets(filterPlanets);
   };
 
   return (
